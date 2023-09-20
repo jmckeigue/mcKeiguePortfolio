@@ -7,7 +7,7 @@
   --bold-font: 700;
   --bolder-font: 900;
   --bg-color: #fcfcfc;
-  --primary-color: #4756df;
+  --primary-color: #7095e4;
   --secondary-color: #7095e4;
   --primary-shadow: #8b8eaf;
   --secondary-shadow: #7095e4;
@@ -101,9 +101,9 @@ nav ul li {
 }
 
 .hero img {
-    height: 20rem;
-    width: 20rem;
-    border-radius: 50%;
+    height: 30rem;
+    width: 30rem;
+    /*border-radius: 50%;*/
     background-color: #fff;
     box-shadow: 0 3px 10px var(--secondary-color);
     margin: 10px;
