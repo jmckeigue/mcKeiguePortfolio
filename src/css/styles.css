@@ -103,11 +103,9 @@ nav ul li {
 .hero img {
     height: 30rem;
     width: 30rem;
-    /*border-radius: 50%;*/
     background-color: #fff;
     box-shadow: 0 3px 10px var(--secondary-color);
     margin: 10px;
-    align-items: left;
 }
 
 .bio {
@@ -265,3 +263,26 @@ footer {
     text-align: center;
     margin: 2rem 0 0;
 }
+
+@media screen and (max-width: 720px) {
+    nav {
+        padding: 1.5rem 1rem;
+    }
+
+    nav ul {
+        position: fixed;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        top: 86px;
+        left: 10%;
+        width: 80%;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+    }
+
+    nav ul li {
+        margin: 8px;
+    }
+}
+
