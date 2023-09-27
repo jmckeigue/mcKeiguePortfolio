@@ -180,10 +180,15 @@ nav ul li {
 .resume-container {
     align-content: center;
     display: flex;
-    width: 20rem;
+    width: 20.5rem;
     height: 30rem;
     margin: auto;
+    padding: 0.938rem;
     box-shadow: 0 3px 10px var(--secondary-shadow);
+}
+
+.resume {
+    margin-top: 3rem;
 }
 
 .contact {
