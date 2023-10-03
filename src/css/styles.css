@@ -358,6 +358,22 @@ footer {
 }
 
 @media screen and (max-width: 420px) {
+    nav ul {
+        position: fixed;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        top: 86px;
+        left: 10%;
+        width: 80%;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    nav ul li {
+        margin: 8px;
+    }
+
     .hero img {
         height: 25rem;
         width: 25rem;
@@ -368,11 +384,7 @@ footer {
     }
 
     .resume-container {
-        width: 17.875rem;
-    }
-
-    .contact-form-container {
-        max-width: 1.75rem;
+        width: 20rem;
     }
 }
 
