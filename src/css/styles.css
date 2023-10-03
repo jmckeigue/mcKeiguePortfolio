@@ -357,3 +357,23 @@ footer {
     }
 }
 
+@media screen and (max-width: 420px) {
+    .hero img {
+        height: 25rem;
+        width: 25rem;
+    }
+
+    .bio {
+        width: 18.3;
+    }
+
+    .resume-container {
+        width: 17.875rem;
+    }
+
+    .contact-form-container {
+        max-width: 1.75rem;
+    }
+}
+
+
