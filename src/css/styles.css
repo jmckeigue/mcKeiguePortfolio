@@ -260,7 +260,7 @@ nav ul li {
     flex-direction: column;
     position: fixed;
     right: 1%;
-    bottom: 50%;
+    bottom: 25%;
 }
 
 .socicon {
@@ -298,11 +298,12 @@ footer {
         background-color: var(--bg-color);
         flex-direction: column;
         top: 86px;
-        left: 10%;
-        width: 80%;
-        text-align: center;
+        width: 80px;
+        right: 520px;
+        text-align: right;
         transform: translateX(120%);
         transition: transform 0.5s ease-in;
+        box-shadow: 5px 5px 5px var(--secondary-shadow);
     }
 
     nav ul li {
@@ -324,12 +325,12 @@ footer {
     }
 
     .hero img {
-        height: 37.5rem;
-        width: 30rem;
+        height: 25rem;
+        width: 25rem;
     }
 
     .bio {
-        margin-top: -7rem;
+        margin-top: 1rem;
         width: 20.5;
     }
 
