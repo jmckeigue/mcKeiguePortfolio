@@ -20,7 +20,7 @@ burger.addEventListener("click", () => {
     ul.classList.toggle("show");
 });
 
-// Close hamburger when a link is clicked
+// Close hamburger
 
 const navLink = document.querySelectorAll(".nav-link");
 
