@@ -18,11 +18,11 @@ Instagram, Linkedin, Github, in case anyone would want to click at any point the
 <h6>
 If not done already:
     <h3>Run:<h3>
-        1)  npm install
-        2)  npm install http-server
-        3)  npx http-server
+        1 -  npm install
+        2 -  npm install http-server
+        3 -  npx http-server
     <h3>Click:<h3>
-        1)  First URL server is available on, usually *http://127.0.0.1:8080*
+        1 -  First URL server is available on, usually *http://127.0.0.1:8080*
     <h3>When Finished:<h3>
-        1)  CTRL + c to stop server
+        1 -  CTRL + c to stop server
 
