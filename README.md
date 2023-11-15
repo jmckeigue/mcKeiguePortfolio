@@ -22,7 +22,7 @@ If not done already:
         2 -  npm install http-server
         3 -  npx http-server<h5>
     <h3>Click:<h3><h5>
-        1 -  First URL server is available on, usually http://127.0.0.1:8080
+        1 -  First URL server is available on, usually http://127.0.0.1:8080 </br>
         2 -  Cmd + left click on url<h5>
     <h3>When Finished:<h3><h5>
         1 -  CTRL + c to stop server<h5>
