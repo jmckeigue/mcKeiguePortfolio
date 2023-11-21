@@ -79,7 +79,11 @@ nav ul {
 }
 
 nav ul li {
-    font-weight: var(--bold-font)
+    font-weight: var(--bold-font);
+}
+
+.timer {
+    font-weight: var(--bold-font);
 }
 
 .burger-menu {
