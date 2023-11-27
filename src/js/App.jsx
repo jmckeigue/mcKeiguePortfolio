@@ -1,4 +1,18 @@
+import { useState } from "react";
 
+const App = ({ data }) => {
+    const [count, setCount] = useState(0);
+
+    return (
+        <main>
+            <div>
+                <div>{count}</div>
+                <button onClick={() => setCount(count + 1)}>Count</button>
+            </div>
+            <pre>{JSON.stringify(data, null, 2)}</pre>
+        </main>
+    );
+};
 //Scroll to top
 const scrollUp = document.querySelector("#scroll-up");
 
@@ -29,3 +43,5 @@ navLink.forEach((link) =>
         ul.classList.remove("show");
     })
 );
+
+export default App
