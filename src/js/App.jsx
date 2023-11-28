@@ -6,6 +6,7 @@ const App = ({ data }) => {
     return (
         <main>
             <div>
+                <Timer/>
                 <div>{count}</div>
                 <button onClick={() => setCount(count + 1)}>Count</button>
             </div>

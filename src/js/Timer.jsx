@@ -19,7 +19,7 @@ const Timer = () => {
           setSeconds(59);
         }
       }
-    }, 1000);
+    }, 1000); 
 
     // Clean up the interval when the component unmounts
     return () => clearInterval(myInterval);
