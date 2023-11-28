@@ -1,31 +1,39 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react'; 
+import { useState, useEffect } from 'react';
 
 const Timer = () => {
-    const Ref = useRef(null);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(30);
 
-    const [timer, setTimer] = useState('00:00:00');
-
-    const getTimeRemaining = (e) => {
-        const total = Date.parse(e) - Date.parse(new Date());
-        const seconds = Math.floor((total / 1000) % 60);
-        const minutes = Math.floor((total / 1000 / 60) % 60);
-        const hours = Math.floor ((total / 1000 / 60 / 60) % 24);
-        return {
-            total, hours, minutes, seconds
-        };
-    }
-
-    const startTimer = (e) => {
-        let { total, hours, minutes, seconds }
-                = getTimeRemaining(e);
-        if(total >= 0) {
-            setTimer(
-                (hours > 9 ? hours : '0' + hours) + ':' + 
-                (minutes > 9 ? minutes : '0' + minutes) + ':'
-                + (seconds > 9 ? seconds : '0' + seconds)
-            )
+  useEffect(() => {
+    const myInterval = setInterval(() => {
+      if (seconds > 0) {
+        setSeconds(seconds - 1);
+      } else {
+        if (minutes === 0) {
+          clearInterval(myInterval);
+          // Add code to display the popup warning here
+          alert("You've been on the website for 5 minutes!");
+        } else {
+          setMinutes(minutes - 1);
+          setSeconds(59);
         }
-    }
-}
+      }
+    }, 1000);
 
-export default Timer
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(myInterval);
+  }, [minutes, seconds]);
+
+  return (
+    <div>
+      {minutes === 0 && seconds === 0 ? null : (
+        <h1>
+          {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
+        </h1>
+      )}
+    </div>
+  );
+};
+
+export default Timer;
