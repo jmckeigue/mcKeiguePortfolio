@@ -1,12 +1,19 @@
 {
   "devDependencies": {
+    "@types/compression": "^1.7.5",
+    "@types/express": "^4.17.21",
+    "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react": "^4.2.0",
     "http-server": "^14.1.1",
+    "typescript": "^5.3.2",
     "vite": "^5.0.2"
   },
   "dependencies": {
     "@types/node": "^20.10.0",
+    "@types/react": "^18.2.39",
+    "@types/react-router-dom": "^5.3.3",
     "express": "^4.18.2",
+    "nodemon": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -17,12 +24,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node server-dev.js",
-    "build:client": "vite build --outDir dist/client",
+    "dev": "nodemon server-dev.mjs",
     "build:function": "vite build --ssr src/function.js --outDir dist/function",
-    "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
-    "build": "npm run build:client && npm run build:server && npm run build:function",
-    "serve": "node server-prod.js"
+    "build:client": "vite build --outDir dist/app/client",
+    "build:server": "tsc -p tsconfig.server.json && vite build --ssr src/entry-server.tsx --outDir dist/entry",
+    "build": "npm run clean && npm run build:client && npm run build:server",
+    "serve": "nodemon ./server/app.mjs",
+    "client": "vite client"
   },
   "keywords": [],
   "author": "",

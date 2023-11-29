@@ -9,8 +9,8 @@ const Timer = () => {
     const myInterval = setInterval(() => {
       if (seconds > 0) {
         setSeconds(seconds - 1);
-      } else {
-        if (minutes === 0) {
+      } else { 
+        if (minutes === 0) { 
           clearInterval(myInterval);
           // Add code to display the popup warning here
           alert("You've been on the website for 5 minutes!");
@@ -33,7 +33,7 @@ const Timer = () => {
         </h1>
       )}
     </div>
-  );
+  ); 
 };
 
 export default Timer;
