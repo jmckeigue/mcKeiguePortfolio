@@ -15,7 +15,8 @@
     "express": "^4.18.2",
     "nodemon": "^3.0.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.0"
   },
   "name": "mckeigueportfolio",
   "description": "<h2>About<h2> <h5> This is my Portfolio Website, consisting of who I am, what I've done, and things pertaining to the CS world. This website has links to my social media, my resume (still needs work) and a way to contact me There is a working \"Jump-To-Top\" botton as well as a working hamburger menu on smaller screens <h5>",
