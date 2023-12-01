@@ -36,15 +36,19 @@
     <script type="module" src='/src/js/Timer.jsx'></script>
     <nav>
         <h1>Jackson McKeigue</h1>
-        <ul class="navigation">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Resume</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        <button class="burger-menu" id="burger-menu">
-          <ion-icon class="bars" name="menu-outline"></ion-icon>
-        </button>
+          <ul>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#resume" class="nav-link">Resume</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+          <i class="navigation" id="navigation">
+            <img  
+              src="src/icons/hamburger-menu.jpeg"
+              class="socicon hamburger-menu"
+              alt="hamburger-menu"
+            />
+          </i>
     </nav>
     <section class="hero" id="about">
         <img
@@ -127,12 +131,10 @@
 
     <!--Resume Section-->
     <section class="resume" id="resume">
-      <h2>Resume</h2>
-      <div class="resume-container">
-        <object data="McKeigue2023Resume.pdf" type="application/pdf">
-          <p>RESUME <a href="McKeigue2023Resume.pdf"></a> </p>
-        </object>
-      </div>
+      <h2>Resume</h2>      
+        <div class="resume-container">
+          <img src="src/icons/Mckeigue-Resume.png" alt="Resume image" target="_blank"></img>
+        </div>  
     </section>
 
     <section class="contact" id="contact">
@@ -212,6 +214,7 @@
         src="src/icons/uparrow.png"
         class="socicon uparrow"
         alt="scroll-up"
+        style="--dark-mode-up-arrow: url('src/icons/dark-mode-arrow.jpg');" 
       />
     </i>
 

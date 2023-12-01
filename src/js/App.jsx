@@ -2,7 +2,7 @@
 //Scroll to top
 const scrollUp = document.querySelector("#scroll-up");
 
-// @ts-ignore
+
 scrollUp.addEventListener("click", () => {
     window.scrollTo({
         top: 0,
@@ -13,13 +13,13 @@ scrollUp.addEventListener("click", () => {
 
 // Nav hamburger
 
-const burger = document.querySelector("#burger-menu");
+const burger = document.querySelector("#navigation");
 const ul = document.querySelector("nav ul");
 const nav = document.querySelector("nav");
 
-// @ts-ignore
+
 burger.addEventListener("click", () => {
-    // @ts-ignore
+
     ul.classList.toggle("show");
 });
 
@@ -29,7 +29,7 @@ const navLink = document.querySelectorAll(".nav-link");
 
 navLink.forEach((link) => 
     link.addEventListener("click", () => {
-        // @ts-ignore
+
         ul.classList.remove("show");
     })
 );

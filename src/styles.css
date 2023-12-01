@@ -82,13 +82,18 @@ nav ul li {
     font-weight: var(--bold-font);
 }
 
-.burger-menu {
+.navigation {
     color: var(--primary-color);
-    font-size: 2rem;
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
-    display: none;
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: white;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
 .timer {
@@ -395,6 +400,25 @@ footer {
     .resume-container {
         width: 20rem;
     }
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+    body { background: black; }
+    h1 { color: var(--secondary-color); }
+    h2 { color: var(--secondary-color); }
+    nav { background: black; }
+    .more-about { background-color: black; }
+    p { color: white; }
+
+    .scroll-up img {
+        content: var(--dark-mode-up-arrow);
+    }
+
+    .burger-menu img {
+        content: var(--darl-mode-burger-menu);
+    }
+
+    footer { background: black; }
 }
 
 
