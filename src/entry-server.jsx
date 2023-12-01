@@ -1,7 +1,16 @@
-import { renderToString } from 'react-dom/server';
+import React from 'react';
+import ReactDomServer from 'react-dom/server';
+import App from './App';
 
-import App from './app';
+export const render = (url, _context) => {
+    const html = ReactDomServer.renderToString(
+        <App />
+    )
+    return {html}
+}
 
-export const render = (data) => {
-    return renderToString(<App data={data} />);
-};
+const _export = {
+    render
+}
+
+export default _export

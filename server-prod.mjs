@@ -2,7 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import express from 'express';
-import { get } from 'express/lib/response.js';
  
 const app = express();
  
@@ -17,12 +16,12 @@ app.use('*', async (_, res) => {
     const data = await getServerData();
     const script = `<script>window.__data__=${JSON.stringify(data)}</script>`;
  
-    const html = template.replace(`<!--outlet-->`, `${render(data)} ${script}`);
+    const html = template.replace(`<!--app-html-->`, `${render(data)} ${script}`);
     res.status(200).set({ 'Content-Type': 'text/html' }).end(html);
   } catch (error) {
     res.status(500).end(error);
   }
-});
+}); 
  
 app.listen(5173, () => {
   console.log('http://localhost:5173.');
