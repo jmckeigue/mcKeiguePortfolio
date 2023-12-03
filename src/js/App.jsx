@@ -13,7 +13,7 @@ scrollUp.addEventListener("click", () => {
 
 // Nav hamburger
 
-const burger = document.querySelector("#navigation");
+const burger = document.querySelector("#burger-menu");
 const ul = document.querySelector("nav ul");
 const nav = document.querySelector("nav");
 
