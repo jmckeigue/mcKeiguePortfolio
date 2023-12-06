@@ -1,6 +1,6 @@
 
 [build]
-  command = "npm run dev" 
+  command = "npm run build" 
   publish = "build-output" 
 
 [[redirects]]  # Configure redirects for client-side routing in SPAs
