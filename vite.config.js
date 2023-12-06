@@ -9,6 +9,8 @@ export default defineConfig({
                 main:(__dirname, 'public/index.html')
             },
         },
+        outDir: 'build-output',
+        assetsDir: 'src',
     },
     resolve: {
         alias: {
