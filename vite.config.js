@@ -10,7 +10,8 @@ export default defineConfig({
             },
         },
     },
-    base: './',
+    root: './',
+    base: '/',
     main: 'src/main.jsx',
     plugins: [react()]
 
