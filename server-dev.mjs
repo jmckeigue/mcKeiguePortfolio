@@ -17,8 +17,8 @@ app.use('*', async (req, res) => {
     const url = req.originalUrl;
 
     try {
-        const template = await vite.transformIndexHtml(url, fs.readFileSync('src/index.html', 'utf-8'));
-        const { render } = await vite.ssrLoadModule('src/entry-server.jsx');
+        const template = await vite.transformIndexHtml(url, fs.readFileSync('./public/index.html', 'utf-8'));
+        const { render } = await vite.ssrLoadModule('./src/entry-server.jsx');
         const { getServerData } = await vite.ssrLoadModule('./server/function.mjs');
         const data = await getServerData();
         const script = `<script>window.__data__=${JSON.stringify(data)}</script>`;

@@ -1,0 +1,9 @@
+
+[build]
+  command = "npm run build" 
+  publish = "build-output" 
+
+[[redirects]]  # Configure redirects for client-side routing in SPAs
+  from = "/*"
+  to = "./index.html"
+  status = 200

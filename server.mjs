@@ -11,7 +11,7 @@ const root = process.cwd();
 const resolve = (_path) => path.resolve(__dirname, _path);
 
 const indexProd = isProd
-    ? fs.readFileSync(resolve('./src/index.html'), 'utf-8')
+    ? fs.readFileSync(resolve('./public/index.html'), 'utf-8')
     : ''
 
 const createServer = async () => {
@@ -59,7 +59,7 @@ const createServer = async () => {
             let template, render;
 
             if (!isProd) {
-                template = fs.readFileSync(resolve('./src/index.html'), 'utf8')
+                template = fs.readFileSync(resolve('./public/index.html'), 'utf8')
                 template = await vite.transformIndexHtml(url, template)
 
                 render = (await vite.ssrLoadModule('./src/entry-server.tsx')).default.render;

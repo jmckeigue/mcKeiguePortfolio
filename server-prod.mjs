@@ -9,10 +9,10 @@ app.use(express.static(path.resolve(path.dirname(fileURLToPath(import.meta.url))
  
 app.use('*', async (_, res) => {
   try {
-    const template = fs.readFileSync('./src/index.html', 'utf-8');
+    const template = fs.readFileSync('./public/index.html', 'utf-8');
     const { render } = await import('./dist/server/entry-server.js');
 
-    const { getServerData } = await import('./server/function.js');
+    const { getServerData } = await import('./server/function.mjs');
     const data = await getServerData();
     const script = `<script>window.__data__=${JSON.stringify(data)}</script>`;
  

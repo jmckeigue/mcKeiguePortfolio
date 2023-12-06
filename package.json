@@ -3,7 +3,7 @@
     "@vitejs/plugin-react": "^4.2.0",
     "http-server": "^14.1.1",
     "netlify-cli": "^17.8.1",
-    "vite": "^5.0.2"
+    "vite": "^5.0.6"
   },
   "dependencies": {
     "@types/node": "^20.10.0",
@@ -21,9 +21,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node server-dev.mjs",
-    "build:client": "vite build --outDir dist/client",
-    "build:function": "vite build --ssr src/js/function.js --outDir dist/function",
-    "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
+    "build:client": "vite build --outDir build-output/client",
+    "build:function": "vite build --ssr server/function.mjs --outDir build-output/function",
+    "build:server": "vite build --ssr src/entry-server.jsx --outDir build-output/server",
     "build": "npm run build:client && npm run build:server && npm run build:function",
     "serve": "node server-prod.mjs"
   },
