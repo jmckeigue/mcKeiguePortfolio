@@ -25,7 +25,7 @@
     "build:function": "vite build --ssr src/js/function.js --outDir dist/function",
     "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
     "build": "npm run build:client && npm run build:server && npm run build:function",
-    "serve": "node server-prod.js"
+    "serve": "node server-prod.mjs"
   },
   "keywords": [],
   "author": "",
