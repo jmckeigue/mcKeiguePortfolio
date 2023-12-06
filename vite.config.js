@@ -18,7 +18,7 @@ export default defineConfig({
     },
     root: './',
     base: '/',
-    main: 'src/main.jsx',
+    main: '/src/main.jsx',
     plugins: [react()]
 
 });

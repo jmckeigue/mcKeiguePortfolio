@@ -1,5 +1,4 @@
 import Timer from "./js/Timer.jsx";
-import Functions from "./js/Functions.jsx";
 import './styles.css'
 
 const App = () => {
@@ -7,7 +6,6 @@ const App = () => {
     return (
         <body>
             <Timer/>
-            <Functions/>
         </body>
     );
 };
