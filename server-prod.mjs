@@ -5,14 +5,14 @@ import express from 'express';
  
 const app = express();
  
-app.use(express.static(path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'dist/client'), { index: false }));
+app.use(express.static(path.resolve(path.dirname(fileURLToPath(import.meta.url)), '/src'), { index: false }));
  
 app.use('*', async (_, res) => {
   try {
-    const template = fs.readFileSync('./dist/client/index.html', 'utf-8');
+    const template = fs.readFileSync('./src/index.html', 'utf-8');
     const { render } = await import('./dist/server/entry-server.js');
 
-    const { getServerData } = await import('./dist/function/function.js');
+    const { getServerData } = await import('./server/function.js');
     const data = await getServerData();
     const script = `<script>window.__data__=${JSON.stringify(data)}</script>`;
  
