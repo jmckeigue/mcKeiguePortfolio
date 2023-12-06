@@ -11,7 +11,7 @@ const root = process.cwd();
 const resolve = (_path) => path.resolve(__dirname, _path);
 
 const indexProd = isProd
-    ? fs.readFileSync(resolve('client/index.html'), 'utf-8')
+    ? fs.readFileSync(resolve('./src/index.html'), 'utf-8')
     : ''
 
 const createServer = async () => {
@@ -43,7 +43,7 @@ const createServer = async () => {
         )
 
         app.use(
-            (await import('serve-static')).default(resolve('./client'), {
+            (await import('serve-static')).default(resolve('./server'), {
                 index: false
             })
         )
@@ -59,18 +59,16 @@ const createServer = async () => {
             let template, render;
 
             if (!isProd) {
-                template = fs.readFileSync(resolve('index.html'), 'utf8')
+                template = fs.readFileSync(resolve('./src/index.html'), 'utf8')
                 template = await vite.transformIndexHtml(url, template)
 
-                render = (await vite.ssrLoadModule('/src/entry-server.tsx')).default.render;
+                render = (await vite.ssrLoadModule('./src/entry-server.tsx')).default.render;
             }
 
             if (isProd) {
                 template = indexProd;
 
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                // @ts-ignore
-                render = (await import('../entry/entry-server.js')).default.render;
+                render = (await import('./src/entry-server.js')).default.render;
             }
 
             const context = {};

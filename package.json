@@ -2,13 +2,16 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.0",
     "http-server": "^14.1.1",
+    "netlify-cli": "^17.8.1",
     "vite": "^5.0.2"
   },
   "dependencies": {
     "@types/node": "^20.10.0",
     "express": "^4.18.2",
+    "git-remote-origin-url": "^4.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "serverless-http": "^3.2.0"
   },
   "name": "mckeigueportfolio",
   "description": "<h2>About<h2> <h5> This is my Portfolio Website, consisting of who I am, what I've done, and things pertaining to the CS world. This website has links to my social media, my resume (still needs work) and a way to contact me There is a working \"Jump-To-Top\" botton as well as a working hamburger menu on smaller screens <h5>",
@@ -19,7 +22,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node server-dev.js",
     "build:client": "vite build --outDir dist/client",
-    "build:function": "vite build --ssr src/function.js --outDir dist/function",
+    "build:function": "vite build --ssr src/js/function.js --outDir dist/function",
     "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
     "build": "npm run build:client && npm run build:server && npm run build:function",
     "serve": "node server-prod.js"
