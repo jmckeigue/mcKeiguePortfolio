@@ -43,7 +43,7 @@ const createServer = async () => {
         )
 
         app.use(
-            (await import('serve-static')).default(resolve('./server'), {
+            (await import('serve-static')).default(resolve('/'), {
                 index: false
             })
         )
@@ -62,13 +62,13 @@ const createServer = async () => {
                 template = fs.readFileSync(resolve('./public/index.html'), 'utf8')
                 template = await vite.transformIndexHtml(url, template)
 
-                render = (await vite.ssrLoadModule('./src/entry-server.tsx')).default.render;
+                render = (await vite.ssrLoadModule('./src/entry-server.jsx')).default.render;
             }
 
             if (isProd) {
                 template = indexProd;
 
-                render = (await import('./src/entry-server.js')).default.render;
+                render = (await import('./src/entry-server.jsx')).default.render;
             }
 
             const context = {};
