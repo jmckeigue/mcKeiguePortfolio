@@ -1,31 +1,31 @@
-# mckeiguePortfolio
-<h2>About<h2>
-<h5>
-This is my Portfolio Website, consisting of who I am, what I've done, and things pertaining to the CS world.
-This website has links to my social media, my resume (still needs work) and a way to contact me
-There is a working "Jump-To-Top" botton as well as a working hamburger menu on smaller screens
-<h5>
+#mckeiguePortfolio
 
-<h2>The Page<h2>
-<h5>
-The main structural elements so far are html, css, and js. This is current and I am still waiting to refactor with React. 
-I made the screen linear in terms of formatting, starting with my image and a small about me, then following the scroll, there is 
-more about me, my top CS skills (from past internships/classes), and then my resume. I chose to have my socials follow;
-Instagram, Linkedin, Github, in case anyone would want to click at any point they are scrolling through.
-<h5>
+This is my Portfolio Website, showcasing information about me, my work, and various aspects related to the field of Computer Science. The website includes links to my social media profiles, an in-progress resume, and a contact form. Additionally, it features a "Jump-To-Top" button and a functional hamburger menu for smaller screens.
 
-<h1>How to Run<h1>
-<h2>If not done already:<h2>
-    <h3>Run:<h3>
-    <h5>
-        1. npm install
-        2. npm update if npm is installed globally
-        3. npm run dev<h5>
-    <h3>Click:<h3>
-    <h5>
-        1. First URL server is available on, usually http://127.0.0.1:8080 </br>
-        2. Cmd + left click on url<h5>
-    <h3>When Finished:<h3>
-    <h5>
-        3. CTRL + c to stop server<h5>
+## Structural Elements
+
+- **/public:** Contains HTML files.
+- **/server:** Contains server/backend functions.
+- **/src:** Contains assets, icons, and other .jsx or .mjs files.
+- **/:** Contains important files to run the program, such as server-dev.mjs, server-prod.mjs, and server.mjs.
+
+## Key Formatting Choices
+
+I opted for a clean and intuitive design for the Portfolio Website, ensuring a seamless flow from top to bottom. The page starts with an image of myself, followed by a concise "About Me" section, gradually expanding into a more detailed overview of my skills, resume, comments, and contact details. To enhance user experience, I incorporated a JavaScript script that enables users to effortlessly navigate back to the top of the page, particularly useful given the single-page application (SPA) nature of the site. Additionally, a user-friendly hamburger menu is strategically placed for easy access from any section, allowing users to efficiently jump between different parts of the page as needed.
+
+## Local Setup
+
+To run the project locally, follow these instructions:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/jmckeigue/mckeiguePortfolio.git
+
+2. In the terminal:
+   ```bash
+   cd mckeiguePortfolio
+
+   npm install
+
+   npm run dev
 
