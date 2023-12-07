@@ -18,14 +18,14 @@ Instagram, Linkedin, Github, in case anyone would want to click at any point the
 <h2>If not done already:<h2>
     <h3>Run:<h3>
     <h5>
-        * -  npm install
-        * -  npm install http-server
-        * -  npx http-server<h5>
+        1. npm install
+        2. npm update if npm is installed globally
+        3. npm run dev<h5>
     <h3>Click:<h3>
     <h5>
-        * -  First URL server is available on, usually http://127.0.0.1:8080 </br>
-        * -  Cmd + left click on url<h5>
+        1. First URL server is available on, usually http://127.0.0.1:8080 </br>
+        2. Cmd + left click on url<h5>
     <h3>When Finished:<h3>
     <h5>
-        * -  CTRL + c to stop server<h5>
+        3. CTRL + c to stop server<h5>
 
