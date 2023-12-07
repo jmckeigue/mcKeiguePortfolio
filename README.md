@@ -1,4 +1,4 @@
-#mckeiguePortfolio
+# mckeiguePortfolio
 
 This is my Portfolio Website, showcasing information about me, my work, and various aspects related to the field of Computer Science. The website includes links to my social media profiles, an in-progress resume, and a contact form. Additionally, it features a "Jump-To-Top" button and a functional hamburger menu for smaller screens.
 
