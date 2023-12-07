@@ -1,10 +1,9 @@
-import React from 'react'; 
 import { useState, useEffect } from 'react';
 import '/src/styles.css';
 
 const Timer = () => {
-  const [minutes, setMinutes] = useState(5);
-  const [seconds, setSeconds] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(5);
 
   useEffect(() => {
     const myInterval = setInterval(() => {
@@ -25,16 +24,6 @@ const Timer = () => {
     // Clean up the interval when the component unmounts
     return () => clearInterval(myInterval);
   }, [minutes, seconds]);
-
-  return (
-    <div className="timer">
-      {minutes === 0 && seconds === 0 ? null : (
-        <h1>
-          {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
-        </h1>
-      )}
-    </div>
-  ); 
 };
 
 export default Timer;

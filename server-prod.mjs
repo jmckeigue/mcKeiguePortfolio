@@ -5,7 +5,7 @@ import express from 'express';
  
 const app = express();
  
-app.use(express.static(path.resolve(path.dirname(fileURLToPath(import.meta.url)), '/src'), { index: false }));
+app.use(express.static(path.resolve(path.dirname(fileURLToPath(import.meta.url)), '/'), { index: false }));
  
 app.use('*', async (_, res) => {
   try {
@@ -24,5 +24,9 @@ app.use('*', async (_, res) => {
 }); 
  
 app.listen(5173, () => {
-  console.log('http://localhost:5173.');
+  try {
+    console.log('Server is running at http://localhost:5173');
+  } catch (error) {
+    console.error('Error starting server:', error);
+  }
 });

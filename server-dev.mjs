@@ -3,12 +3,32 @@ import express from 'express';
 import { createServer } from 'vite';
 
 const app = express();
+const port = process.env.PORT || 3000;
+
+const comments = [
+    {
+        name: 'Cole Finely',
+        description: 'Your page looks amazing!',
+    },
+    {
+        name: 'Prof Skiadas',
+        description: 'Your use of JS and JSX is awesome!',
+    },
+    {
+        name: 'Will Slover',
+        description: 'Most trustworthy website!',
+    },
+];
 
 const vite = await createServer({
     server: {
         middlewareMode: true,
     },
     appType: 'custom',
+});
+
+app.get('/api/comments', (req, res) => {
+    res.json(comments);
 });
 
 app.use(vite.middlewares);
@@ -30,6 +50,6 @@ app.use('*', async (req, res) => {
     }
 });
 
-app.listen(3000, () => {
-    console.log('http://localhost:3000');
+app.listen(port, () => {
+    console.log(`Server is running on port http://localhost:${port}`);
 });

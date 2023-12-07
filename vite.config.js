@@ -3,10 +3,13 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
 export default defineConfig({
+    optimizeDeps: {
+        include: ['react', 'react-dom'],
+    },
     build: {
         rollupOptions: {
             input: {
-                main:(__dirname, 'public/index.html')
+                main:(__dirname, '/src/main.jsx')
             },
         },
         outDir: 'build-output',
@@ -14,11 +17,11 @@ export default defineConfig({
     },
     resolve: {
         alias: {
-            '/@/': path.resolve(__dirname, 'src/'),
+            '/@/': path.resolve(__dirname, '/src/'),
         },
-        extenstions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'],
+        extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'],
     },
-    root: './',
+
     base: '/',
     main: '/src/main.jsx',
     plugins: [react()]
