@@ -58,11 +58,6 @@ window.onload = function () {
     }
 };
 
-
-
-
-
-
 if (typeof window !== 'undefined') {
 
     // Scroll to top
@@ -78,19 +73,27 @@ if (typeof window !== 'undefined') {
   
     // Nav hamburger
     const burger = document.querySelector("#burger-menu");
-    const ul = document.querySelector("nav ul");
-    const nav = document.querySelector("nav");
-  
+    const ul = document.querySelector(".navbar-list");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
     burger.addEventListener("click", () => {
         ul.classList.toggle("show");
+        dropdownMenu.classList.toggle("show");
+
+        const icon = document.querySelector(".burger-menu");
+        icon.classList.toggle("icon-shift");
     });
-  
+
     // Close hamburger
     const navLink = document.querySelectorAll(".nav-link");
-  
+
     navLink.forEach((link) => {
         link.addEventListener("click", () => {
             ul.classList.remove("show");
+            dropdownMenu.classList.remove("show");
+
+            const icon = document.querySelector(".burger-menu");
+            icon.classList.remove("icon-shift");
         });
     });
 }
