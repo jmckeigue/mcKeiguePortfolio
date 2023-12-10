@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import express from 'express';
  
 const app = express();
+const port = process.env.PORT || 8080;
  
 app.use(express.static(path.resolve(path.dirname(fileURLToPath(import.meta.url)), '/'), { index: false }));
  
@@ -23,9 +24,9 @@ app.use('*', async (_, res) => {
   }
 }); 
  
-app.listen(5173, () => {
+app.listen(port, () => {
   try {
-    console.log('Server is running at http://localhost:5173');
+    console.log(`Server is running on port http://localhost:${port}`);
   } catch (error) {
     console.error('Error starting server:', error);
   }
