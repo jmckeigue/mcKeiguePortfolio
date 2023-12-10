@@ -51,11 +51,12 @@ function displayComments(container) {
 }
 
 window.onload = function () {
-    setTimeout(function() {
-        alert('You\'ve been on this page for so long, thank you!');
+    console.log('Window onload event occurred.');
+
+    setTimeout(function () {
+        alert("You've been on this page for so long, thank you!");
     }, 3000);
 
-    console.log('Window onload event occurred.');
     var showCommentsButton = document.getElementById('showCommentsButton');
     if (showCommentsButton) {
         showCommentsButton.addEventListener('click', showComments);

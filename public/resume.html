@@ -12,26 +12,39 @@
 </head>
 
 <body>
-    <div id="root"></div>
-    <nav>
-        <h1>Jackson McKeigue</h1>
-        <div id="timer-container"></div>
-          <ul>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#resume" class="nav-link">Resume</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-          </ul>
-          <i class="burger-menu" id="burger-menu">
-            <img  
-              src="src/icons/hamburger-menu.jpeg"
-              class="socicon hamburger-menu"
-              alt="hamburger-menu"
-            />
-          </i>
-    </nav>
+  <div id="root"></div>
+  <nav>
+      <h1>Jackson McKeigue</h1>
+      <i class="burger-menu" id="burger-menu">
+        <img  
+          src="src/icons/hamburger-menu.png"
+          class="socicon hamburger-menu"
+          alt="hamburger-menu"
+          style="--dark-mode-burger-menu: url('src/icons/dark-mode-menu.png');" 
+        />
+      </i>
+      <ul class="navbar-list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+  </nav>
+  <div class="dropdown-menu">
+    <ul class="navbar-list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
     <object data="McKeigueResume.pdf" type="application/pdf" width="100%" height="600px" ></object>
     <p>View/Download Resume: <a href="McKeigueResume.pdf" target="_blank">Download PDF</a></p>
+
+    <section id="comments">
+      <button id="showCommentsButton">Show Comments</button>
+      <div id="commentsContainer"></div>
+    </section>
 </body>
 <footer>
     <p class="copy">&copy; Copyright 2023</p>
@@ -42,4 +55,8 @@
         >
     </p>
 </footer>
+
+<script type="module" src="/src/Functions.jsx"></script>
+<script type="module" src="/src/App.jsx"></script>
+
 </html>
