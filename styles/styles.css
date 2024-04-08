@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
 
 /* Variables */
-:root {
+/* :root {
   --font-family: "Roboto", sans-serf;
   --normal-font: 400;
   --bold-font: 700;
@@ -18,12 +18,12 @@
 }
 /* Variables end */
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 /* CSS Resets */
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -44,7 +44,7 @@ a:hover {
 
 body {
   font-family: var(--font-family);
-}
+}  */
 
 nav {
     position: sticky;
@@ -145,7 +145,7 @@ nav a:hover {
     transform: translateX(-250px);
 }
 
-/* #timer-container {
+#timer-container {
     display: flex; 
     background-color: white;
     align-items: center;
@@ -156,7 +156,7 @@ nav a:hover {
     color: var(--primary-color);
     font-size: 18px; 
     margin-left: 10px; 
-} */
+} 
 
 .popup {
     position: fixed;
