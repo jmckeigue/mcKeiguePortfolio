@@ -9,7 +9,7 @@ const SocialSection = () => {
                     className="socicon"
                 />
             </a>
-            <a href="https://linkedin.com/in/jackson-mckeigue/" target="_blank">
+            <a href="https://linkedin.com/in/jackson-mckeigue" target="_blank">
                 <img
                     src="src/icons/linkedin.gif"
                     alt="Linkedin"
