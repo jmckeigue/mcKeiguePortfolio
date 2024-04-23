@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
+import { useColorScheme } from '../components/useColorScheme';
 
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const theme = useColorScheme();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    const burgerIcon = theme === 'dark' ? "/src/icons/dark-mode-menu.png" : "/src/icons/hamburger-menu.png";
 
     return (
         <nav>
@@ -13,10 +17,9 @@ const Nav = () => {
             <button id="burger-menu" onClick={toggleMenu}>
                 <i className="burger-menu" id="burger-menu">
                     <img  
-                        src="/src/icons/hamburger-menu.png"
+                        src={burgerIcon}
                         className="socicon hamburger-menu"
                         alt="hamburger-menu"
-                        style={{ '--dark-mode-burger-menu': 'url("/src/icons/dark-mode-menu.png")' }}
                     />
                 </i>
             </button>

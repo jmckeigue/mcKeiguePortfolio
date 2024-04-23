@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
 
 /* Variables */
-/* :root {
+:root {
   --font-family: "Roboto", sans-serf;
   --normal-font: 400;
   --bold-font: 700;
@@ -18,12 +18,12 @@
 }
 /* Variables end */
 
-/* html {
+html {
   scroll-behavior: smooth;
-} */
+}
 
 /* CSS Resets */
-/* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -44,7 +44,7 @@ a:hover {
 
 body {
   font-family: var(--font-family);
-}  */
+} 
 
 nav {
     position: sticky;
@@ -109,7 +109,8 @@ nav a:hover {
     top: 0;
     right: -250px;
     width: 250px;
-    height: 27%;
+    height: 200px;
+    overflow-y: auto;
     transition: 0.5s ease;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -131,14 +132,29 @@ nav a:hover {
     text-decoration: none;
 }
 
-.burger-menu {
+button#burger-menu {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
     padding: 0;
     cursor: pointer;
     position: fixed;
     top: 10px;
     right: 10px;
-    z-index: 2;
+    z-index: 3;
     transition: 0.5s ease;
+}
+
+button.burger-menu img {
+    width: 40px; /* Set the width of the icon */
+    height: 40px; /* Set the height of the icon */
+    object-fit: contain;
 }
 
 .burger-menu.icon-shift {
@@ -260,10 +276,6 @@ nav a:hover {
     margin: 10px;
 }
 
-.resume {
-    margin-top: 2rem;
-}
-
 .resume h2 {
     text-align: center;
     margin-bottom: var(--bottom-margin-2);
@@ -273,7 +285,7 @@ nav a:hover {
     align-content: center;
     display: flex;
     max-width: 50%;
-    height: 49rem;
+    height: 100%;
     margin: auto;
     padding: 0.938rem;
     box-shadow: 0 3px 10px var(--secondary-shadow);
@@ -407,11 +419,19 @@ nav a:hover {
     right: 0.5%;
     bottom: 3%;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1.1%;
+    bottom: 5%;
+    background-color: none;
+    z-index: 1000;
+
 }
 
 .up-arrow {
-    width: 3rem;
-    height: 3rem;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 footer {
@@ -441,10 +461,6 @@ footer {
 
     nav ul li {
         margin: 8px;
-    }
-
-    .burger-menu {
-        display: block;
     }
 
     nav ul.show {

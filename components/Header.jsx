@@ -11,15 +11,15 @@ const Header = () => {
                 <link rel="stylesheet" href="/src/styles.css" />
                 {/* Favicons */}
                 <link
-                    rel="apple-touch-icon"
+                    rel="portfolio"
                     sizes="180x180"
-                    href="src/icons/apple-touch-icon.png"
+                    href="src/icons/portfolio.png"
                 />
                 <link
                     rel="icon"
                     type="image/png"
                     sizes="32x32"
-                    href="src/icons/favicon-32x32.png"
+                    href="src/icons/portfolio.png"
                 />
                 {/* Animate CSS CDN */}
                 <link

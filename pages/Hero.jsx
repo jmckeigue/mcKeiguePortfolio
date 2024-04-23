@@ -12,9 +12,9 @@ const Hero = () => {
             <div class="bio animage__animated animate__shakeX">
                 <h2 class="bio-title">About Me</h2>
                 <p class="bio-text">
-                Team-oriented and hard-working individual seeking to apply my college degree and recent 
-                work experiences to continue to expand my skill set in a professional environment. 
-                Responsible, quick learner, and able to complete tasks in a timely and efficient manner.
+                Results-driven and adaptable Computer Science graduate seeking to leverage recent internship
+                experiences and strong programming skills in a professional setting. Eager to contribute to
+                impactful projects while continuing to expand knowledge and expertise in software development.
                 </p>
             </div>
         </section>

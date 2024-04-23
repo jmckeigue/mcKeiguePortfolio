@@ -1,31 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
 
-export const useScrollToTop = () => {
-    useEffect(() => {
-      const scrollUp = document.querySelector("#scroll-up");
-  
-      const handleScroll = () => {
-        window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: "smooth",
-        });
-      };
-  
-      if (scrollUp) {
-        scrollUp.addEventListener("click", handleScroll);
-      }
-  
-      // Cleanup
-      return () => {
-        if (scrollUp) {
-          scrollUp.removeEventListener("click", handleScroll);
-        }
-      };
-    }, []);
-};
-
 export const WindowLoad = () => {
     useEffect(() => {
         console.log('Window onload event occurred.');
@@ -116,34 +91,4 @@ const NavBar = () => {
 //             });
 //         })
 //         .catch((error) => console.error('Error fetching comments:', error));
-// }
-
-// if (typeof window !== 'undefined') {
-
-  
-//     // Nav hamburger
-//     const burger = document.querySelector("#burger-menu");
-//     const ul = document.querySelector(".navbar-list");
-//     const dropdownMenu = document.querySelector(".dropdown-menu");
-
-//     burger.addEventListener("click", () => {
-//         ul.classList.toggle("show");
-//         dropdownMenu.classList.toggle("show");
-
-//         const icon = document.querySelector(".burger-menu");
-//         icon.classList.toggle("icon-shift");
-//     });
-
-//     // Close hamburger
-//     const navLink = document.querySelectorAll(".nav-link");
-
-//     navLink.forEach((link) => {
-//         link.addEventListener("click", () => {
-//             ul.classList.remove("show");
-//             dropdownMenu.classList.remove("show");
-
-//             const icon = document.querySelector(".burger-menu");
-//             icon.classList.remove("icon-shift");
-//         });
-//     });
 // }
