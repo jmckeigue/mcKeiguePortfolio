@@ -7,7 +7,7 @@ export const WindowLoad = () => {
 
         const timeoutId = setTimeout(() => {
             alert("You've been on this page for so long, thank you!");
-        }, 3000);
+        }, 60000);
 
         const handleShowComments = () => {
             // Assuming `showComments` is defined elsewhere and is not reliant on direct DOM manipulation
