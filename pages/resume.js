@@ -11,7 +11,7 @@ const ResumePage = () => {
             <Header />
             <ResumeHeader />
             <main style={{ padding: '20px' }}>
-                <object data="/McKeigue_Resume.pdf" type="application/pdf" width="100%" height="800">
+                <object data="/McKeigue_Resume.pdf" type="application/pdf" width="95%" height="800">
                 <iframe src="/McKeigue_Resume.pdf" style={{ width: '100%', height: '100%', border: 'none' }} title="My Resume"></iframe>
                 </object>
             </main>
