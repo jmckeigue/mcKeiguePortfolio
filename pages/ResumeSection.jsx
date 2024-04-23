@@ -7,7 +7,7 @@ const ResumeSection = () => {
             <div className="resume-container">
                 <a href="/resume" target="_blank">View/Download Resume (PDF)
                     <img 
-                        src="src/icons/Mckeigue_Resume.png"
+                        src="src/icons/McKeigue_Resume.png"
                         alt="Resume"
                         loading="lazy"
                         style={{ maxWidth: '100%', height: 'auto' }}
