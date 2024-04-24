@@ -7,15 +7,47 @@
   --bold-font: 700;
   --bolder-font: 900;
   --bg-color: #fcfcfc;
-  --primary-color: #7095e4;
-  --secondary-color: #7095e4;
-  --primary-shadow: #8b8eaf;
-  --secondary-shadow: #7095e4;
+  --primary-color: #ffd900d1;
+  --secondary-color: #757983;
+  --nav-bg-color: #ffd900d1;
+  --primary-shadow: #ffffff;
+  --secondary-shadow: #ffffff;
   --bottom-margin: 0.5rem;
   --bottom-margin-2: 1rem;
   --line-height: 1.7rem;
   --transition: 0.3s;
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Define dark theme colors and other properties */
+        --primary-color: #ffd900d1;
+        --secondary-color: #757983;
+        --nav-bg-color: #000000;
+        --box-shadow-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .submit-button {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+}
+
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --primary-color: #000000;
+        --secondary-color: #5d5c5c;
+        --nav-bg-color: #ffffff;
+        --box-shadow-color: rgba(0, 0, 0, 0.15);
+    }
+
+    .submit-button {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+}
+
 /* Variables end */
 
 html {
@@ -55,16 +87,13 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 3.5rem;
-    background-color: var(--bg-color); 
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-}
-
-nav h1 {
+    background-color: var(--nav-bg-color);
+    box-shadow: 0 4px 6px var(--box-shadow-color);
     color: var(--primary-color);
 }
 
 nav a {
-    color: var(--primary-color);
+    color: inherit;
     transition: var(--transition);
 }
 
@@ -117,7 +146,10 @@ nav a:hover {
 }
 
 .navbar-list.show {
-    background-color: black;
+    padding: 0.5rem 5rem;
+    background-color: var(--nav-bg-color);
+    box-shadow: 0 4px 6px var(--box-shadow-color);
+    color: var(--primary-color);
     right: 0;
 }
 
@@ -294,14 +326,17 @@ button.burger-menu img {
     height: 100%;
     margin: auto;
     padding: 0.938rem;
-    box-shadow: 0 3px 10px var(--secondary-shadow);
+    background-color: #fff;
+    box-shadow: 0 3px 10px var(--secondary-color);
 }
 
 .resume {
     margin-top: 3rem;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
 }
 
-#showCommentsButton {
+/* #showCommentsButton {
     display: block;
     width: 15rem;
     padding: 10px;
@@ -340,7 +375,7 @@ button.burger-menu img {
     padding: 0.625rem;
     border-radius: 6px;
     box-shadow: 0px 2px 15px 2px var(--primary-shadow);
-}
+} */
 
 .contact {
     margin-top: 1rem;
@@ -376,14 +411,14 @@ button.burger-menu img {
     padding-bottom: 10px;
     border-radius: 5px;
     border: none;
-    border: 2px outset var(--primary-color);
+    border: 2px outset var(--secondary-color);
     font-size: 0.875rem;
     outline: none;
 }
 
 .input-field::placeholder {
     padding: 0.5rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .submit-button {
@@ -391,13 +426,14 @@ button.burger-menu img {
     padding: 10px;
     margin: 10px 0;
     background-color: #fff;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--secondary-color);
     border-radius: 5px;
     font-size: 1rem;
     font-weight: var(--bold-font);
-    color: var(--primary-color);
     transition: var(--transition);
+    cursor: pointer;
 }
+
 
 .submit-button:hover {
     background-color: var(--primary-color);
@@ -523,6 +559,26 @@ footer {
 
     nav ul li {
         margin: 8px;
+    }
+
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        max-width: 68.75rem;
+        margin: auto;
+    }
+
+    .bio p {
+        line-height: var(--line-height);
+        padding: 0.3rem 0;
+    }
+    
+    .more-about {
+        margin: auto;
+        background-color: var(--bg-color);
+        /* padding: 1rem 6rem; */
     }
 
     .bio {

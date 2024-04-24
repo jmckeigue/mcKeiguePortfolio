@@ -5,9 +5,9 @@ export const WindowLoad = () => {
     useEffect(() => {
         console.log('Window onload event occurred.');
 
-        const timeoutId = setTimeout(() => {
-            alert("You've been on this page for so long, thank you!");
-        }, 60000);
+        // const timeoutId = setTimeout(() => {
+        //     alert("You've been on this page for so long, thank you!");
+        // }, 60000);
 
         const handleShowComments = () => {
             // Assuming `showComments` is defined elsewhere and is not reliant on direct DOM manipulation
