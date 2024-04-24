@@ -331,6 +331,7 @@ button.burger-menu img {
     padding: 0.938rem;
     background-color: #fff;
     box-shadow: 0 3px 10px var(--secondary-color);
+    border-radius: 5px;
 }
 
 .resume {
@@ -596,7 +597,7 @@ footer {
 
 @media only screen and (prefers-color-scheme: dark) {
     body { background: black; }
-    h1 { color: var(--secondary-color); }
+    h1 { color: var(--primary-color); }
     h2 { color: var(--secondary-color); }
     nav { background: black; }
     .more-about { background-color: black; }
