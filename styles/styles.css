@@ -254,6 +254,12 @@ button.burger-menu img {
     margin-top: 2.5rem;
 }
 
+.skills img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+}
+
 .skill-header {
     margin-bottom: 1rem;
 }
@@ -494,10 +500,24 @@ footer {
 }
 
 @media screen and (max-width: 420px) {
+    nav {
+        padding: 1.5rem 1rem;
+    }
+
     nav ul {
-        left: 10%;
+        position: fixed;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        top: 86px;
+        right: 10%;
         width: 80%;
-        text-align: center;
+        text-align: right;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        box-shadow: 5px 5px 5px var(--secondary-shadow);
+    }
+
+    nav ul.show {
         transform: translateX(0);
     }
 

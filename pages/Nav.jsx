@@ -9,6 +9,10 @@ const Nav = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    }
+
     const burgerIcon = theme === 'dark' ? "/src/icons/dark-mode-menu.png" : "/src/icons/hamburger-menu.png";
 
     return (
@@ -24,10 +28,10 @@ const Nav = () => {
                 </i>
             </button>
             <ul className={`navbar-list ${isMenuOpen ? 'show' : '' } `}>
-                <li><a href="#about" className="nav-link">About</a></li>
-                <li><a href="#skills" className="nav-link">Skills</a></li>
-                <li><a href="#resume" className="nav-link">Resume</a></li>
-                <li><a href="#contact" className="nav-link">Contact</a></li>
+                <li onClick={closeMenu}><a href="#about" className="nav-link">About</a></li>
+                <li onClick={closeMenu}><a href="#skills" className="nav-link">Skills</a></li>
+                <li onClick={closeMenu}><a href="#resume" className="nav-link">Resume</a></li>
+                <li onClick={closeMenu}><a href="#contact" className="nav-link">Contact</a></li>
             </ul>
             <div className={`dropdown-menu ${isMenuOpen ? 'show' : ''}`}>
                 <ul className="navbar-list">
