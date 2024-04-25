@@ -328,10 +328,11 @@ button.burger-menu img {
     max-width: 50%;
     height: 100%;
     margin: auto;
-    padding: 0.938rem;
+    padding: 15px;
     background-color: #fff;
     box-shadow: 0 3px 10px var(--secondary-color);
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .resume {
@@ -342,7 +343,7 @@ button.burger-menu img {
 
 .resume-iframe {
     width: 100%;
-    height: 100vh; /* Viewport height units to take full height of the viewport */
+    height: 75vh; /* Viewport height units to take full height of the viewport */
     border: none;
 }
 
@@ -545,12 +546,13 @@ footer {
     }
 
     .resume-container {
+        justify-content: center;
         margin-top: 1rem;
         width: 100%;
     }
 
     .resume-iframe {
-        height: auto;
+        height: 40vh;
     }
 }
 
@@ -606,8 +608,12 @@ footer {
 
     .resume-container {
         margin-top: 1rem;
-        width: 100%;
-        min-height: auto;
+        /* width: 100%;
+        min-height: auto; */
+    }
+
+    .resume-iframe {
+        height: 50vh;
     }
 }
 
