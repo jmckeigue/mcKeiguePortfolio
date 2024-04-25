@@ -340,6 +340,12 @@ button.burger-menu img {
     color: var(--secondary-color);
 }
 
+.resume-iframe {
+    width: 100%;
+    height: 100vh; /* Viewport height units to take full height of the viewport */
+    border: none;
+}
+
 /* #showCommentsButton {
     display: block;
     width: 15rem;
@@ -541,6 +547,10 @@ footer {
     .resume-container {
         margin-top: 1rem;
         width: 100%;
+    }
+
+    .resume-iframe {
+        height: auto;
     }
 }
 
