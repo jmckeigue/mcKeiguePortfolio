@@ -537,6 +537,11 @@ footer {
         width: 6rem;
         height: auto;
     }
+
+    .resume-container {
+        margin-top: 1rem;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -590,7 +595,9 @@ footer {
     }
 
     .resume-container {
+        margin-top: 1rem;
         width: 100%;
+        min-height: auto;
     }
 }
 
