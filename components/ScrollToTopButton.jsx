@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useColorScheme } from "./useColorScheme";
+import { useColorScheme } from "../hooks/useColorScheme";
 
 const ScrollToTopButton = () => {
     const [isVisible, setIsVisible] = useState(false);
