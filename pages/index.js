@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from '../Header';
-import Nav from './Nav';
-import Hero from '../Hero';
-import About from '../About';
-import Skills from '../Skills';
+import Header from '../components/Header';
+import Nav from '../components/Nav';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import Skills from '../components/Skills';
 import Resume from '../components/Resume/ResumeSection';
-import Contact from '../Contact';
-import Footer from '../Footer';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 const HomePage = () => {
     return (
