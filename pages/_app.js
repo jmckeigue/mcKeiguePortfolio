@@ -1,17 +1,12 @@
-import ScrollToTopButton from '../components/ScrollToTopButton';
-import SocialSection from '../components/SocialSection';
-import { WindowLoad } from '../public/src/Functions'
+import Layout from '../components/Layout';
 import '../styles/global.css';
 import '../styles/styles.css';
 
 export default function MyApp({ Component, pageProps }) {
 
     return (
-        <>
-            <WindowLoad />
+        <Layout>
             <Component {...pageProps} />
-            <SocialSection />
-            <ScrollToTopButton />
-        </>
+        </Layout>
     );
 }

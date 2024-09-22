@@ -343,8 +343,7 @@ button.burger-menu img {
 
 .resume-iframe {
     width: 100%;
-    height: 75vh; /* Viewport height units to take full height of the viewport */
-    border: none;
+    height: 75vh;
 }
 
 /* #showCommentsButton {
