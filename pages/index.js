@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import Nav from '../components/Nav';
+import Nav from './Nav';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Skills from '../components/Skills';
