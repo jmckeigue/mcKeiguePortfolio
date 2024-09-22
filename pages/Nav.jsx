@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useColorScheme } from '../components/useColorScheme';
+import { useColorScheme } from '../hooks/useColorScheme';
 
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
